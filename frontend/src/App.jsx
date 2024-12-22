@@ -1,4 +1,6 @@
-// import React from 'react';
+import * as React from 'react';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Home from './components/Home';
 import NotFound from './components/NotFound';
