@@ -12,11 +12,11 @@ Ensure you have the following installed on your machine:
 
 ### Setup Instructions
 
-#### 1. Unzip the Repository
+#### 1. Clone the Repository
 
 ```
-$> unzip direct_shifts.zip
-$> cde direct_shifts
+$> git@github.com:aslam/direct_shifts.git
+$> cd direct_shifts
 ```
 
 #### 2. Setup the Backend (Rails API)
