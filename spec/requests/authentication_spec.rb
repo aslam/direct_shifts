@@ -19,12 +19,13 @@ RSpec.describe 'User Authentication', type: :request do
 
   describe 'POST /users/sign_in' do
     let(:user) { create(:user) }
+    let(:headers) { { 'Content-Type': 'application/json', 'Accept': 'application/json' } }
 
     it 'logs in a user' do
       login_params = {
         user: {
           email: user.email,
-          password: 'password123'
+          password: user.password
         }
       }
 

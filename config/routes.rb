@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
   }
 
-  post 'users/send_referral', to: 'users#send_referral'
-  # get 'users/current_user', to: 'users#current_user#index'
+  resources :referrals, only: [:create]
 
   get "up" => "rails/health#show", as: :rails_health_check
 

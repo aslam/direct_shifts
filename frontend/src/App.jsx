@@ -10,6 +10,7 @@ import NotFound from './components/NotFound';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import SignOut from './components/SignOut';
+import ReferralForm from './components/ReferralForm';
 
 function Header({ isLoggedIn, userEmail }) {
   return (
@@ -29,6 +30,9 @@ function Header({ isLoggedIn, userEmail }) {
             </Typography>
             <Button color="inherit" component={Link} to="/">
               Home
+            </Button>
+            <Button color="inherit" component={Link} to="/referral">
+              Send Referral
             </Button>
             <Button color="inherit" component={Link} to="/signout">
               Sign Out
@@ -95,6 +99,7 @@ function App() {
               />
             }
           />
+          <Route path="/referral" element={<ReferralForm />} />
           <Route
             path="/signout"
             element={<SignOut onSignOut={handleSignOut} />}
