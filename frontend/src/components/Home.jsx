@@ -1,8 +1,30 @@
+import React from 'react';
+import { Container, Typography, Box } from '@mui/material';
+
 function Home() {
   return (
-    <div>
-      <h1>Welcome to the DirectShifts</h1>
-    </div>
+    <Container
+      maxWidth="sm"
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        backgroundColor: '#f0f0f0',
+      }}
+    >
+      <Box>
+        <Typography
+          variant="h1"
+          component="h1"
+          color="textPrimary"
+          gutterBottom
+        >
+          Welcome to DirectShifts
+        </Typography>
+      </Box>
+    </Container>
   );
 }
 

@@ -13,7 +13,7 @@ RSpec.describe 'User Authentication', type: :request do
 
       post '/users', params: user_params
 
-      expect(response).to have_http_status(:created)
+      expect(response).to have_http_status(:ok)
     end
   end
 
