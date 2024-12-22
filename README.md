@@ -1,24 +1,78 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This README provides the necessary steps to get the application up and running on your local machine.
 
-Things you may want to cover:
+Prerequisites
+Ensure you have the following installed on your machine:
 
-* Ruby version
+- Ruby 3.3.6
+- Rails 7.1
+- PostgreSQL 14
+- Node.js >= 20
 
-* System dependencies
+### Setup Instructions
 
-* Configuration
+#### 1. Unzip the Repository
 
-* Database creation
+```
+$> unzip direct_shifts.zip
+$> cde direct_shifts
+```
 
-* Database initialization
+#### 2. Setup the Backend (Rails API)
 
-* How to run the test suite
+##### Install Ruby Gems
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+$> gem install bundler
+$> bundle install
+```
 
-* Deployment instructions
+##### Setup the Database
 
-* ...
+Ensure PostgreSQL is running on your machine. Then, run the following command to create and setup the database:
+
+```
+bin/setup
+```
+
+#### 3. Setup the Frontend (React)
+
+Navigate to the `frontend` directory and install the necessary Node.js packages:
+
+```
+$> cd frontend
+$> npm install
+```
+
+#### 4. Running the Application
+
+##### Start the Rails Server
+
+In the root directory of the project, run:
+
+```
+$> bin/rails server
+```
+
+##### Start the React Development Server
+
+In the `frontend` directory, run:
+
+```
+$> npm run dev
+```
+
+#### 5. Access the Application
+
+Open your browser and navigate to:
+
+`http://localhost:3001` to access the React frontend.
+
+### Additional Information
+
+#### Running Tests
+
+To run the test suite, use the following command:
+
+`bundle exec rspec`
